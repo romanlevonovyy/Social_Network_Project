@@ -9,8 +9,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 const App = (props) => {
 
 
-    return ( < BrowserRouter >
-        <
+    return ( <
         div className = "app-wrapper" >
         <
         Header / >
@@ -22,20 +21,19 @@ const App = (props) => {
         <
         Route path = '/dialogs'
         render = {
-            () => < Dialogs dialogs = { props.appState.dialogs }
-            messages = { props.appState.messages }
+            () => < Dialogs state = { props.state.dialogsPage }
+
             />
         }
         /> <
         Route path = '/profile'
         render = {
-            () => < Profile posts = { props.appState.posts }
+            () => < Profile state = { props.state.profilePage }
             />
         }
         />  < /
         div > <
-        /div>  < /
-        BrowserRouter >
+        /div> 
     );
 }
 
